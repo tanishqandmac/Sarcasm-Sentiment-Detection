@@ -11,6 +11,7 @@ api = tweepy.API(auth)
 
 query = '#sarcasm'
 max_tweets = 5
+
 searched_tweets = [status for status in tweepy.Cursor(api.search, q=query).items(max_tweets)]
 
 for k in searched_tweets:
